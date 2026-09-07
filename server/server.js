@@ -19,11 +19,10 @@ const teamRoutes = require("./routes/teamRoutes");
 const app = express();
 
 const allowedOrigins = [
-    "http://localhost:5173",       // local dev (Vite)
-    "http://localhost:3000",       // local dev (Create React App, just in case)
-    "https://moniterx.vercel.app", // deployed frontend
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://client-omega-fawn-94.vercel.app",
 ];
-
 app.use(cors({
     origin: function (origin, callback) {
         if (!origin || allowedOrigins.includes(origin)) {

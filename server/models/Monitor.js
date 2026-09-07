@@ -5,12 +5,12 @@ const monitorSchema = new mongoose.Schema(
         user: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "User",
-            required: null,
+            required: true,
         },
         team: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Team",
-            default: true,
+            default: null,
         },
         name: {
             type: String,
